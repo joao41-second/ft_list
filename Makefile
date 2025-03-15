@@ -18,7 +18,7 @@ AR = ar rcs
 
 
 Free_DIR = ../ft_free/
-Free = $(Free_)ft_free.a
+Free = $(Free_DIR)ft_free.a
 
 
 SRCS = list_f.c list_f_2.c list_free.c \
@@ -50,6 +50,7 @@ git_free:
 	@if [! -d "$(Free_DIR)"]; then \
 		cd .. && git clone git@github.com:joao41-second/libft.git; \
 		fi
+	cd ../ft_free/ && make 
 
 
 $(NAME): $(OBJECT)

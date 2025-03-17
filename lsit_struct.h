@@ -10,8 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIST_STRUCT_H
-#define LIST_STRUCT_H
+#ifndef LSIT_STRUCT_H
+# define LSIT_STRUCT_H
+
 typedef struct s_list_
 {
 	void			*content;
@@ -19,4 +20,3 @@ typedef struct s_list_
 	struct s_list_	*previous;
 }					t_list_;
 #endif
-

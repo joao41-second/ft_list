@@ -6,13 +6,13 @@
 #    By: jperpect <jperpect@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/08 14:51:15 by jperpect          #+#    #+#              #
-#    Updated: 2025/03/14 22:39:12 by jperpct          ###   ########.fr        #
+#    Updated: 2025/04/01 16:54:28 by jperpct          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 FLGS = -Wall -Wextra -Werror
 
-NAME = lsit.a
+NAME = list.a
 
 AR = ar rcs
 

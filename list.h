@@ -24,6 +24,8 @@
  */
 t_list_	*ft_node_new(void *n);
 
+void ft_add_node(void *node,t_list_ **list);
+
 /**
  * @brief defines an already initialized node int the list 
  *

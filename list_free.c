@@ -85,3 +85,25 @@ t_list_	*get_list_index(t_list_ *list, int index)
 	node = (t_list_ *)get_list(list, ints, get_index);
 	return (node);
 }
+
+void ft_add_node(void *node,t_list_ **list)
+{
+	t_list_ *new;
+	if(*list == NULL)
+	{
+		if(node != NULL)
+			*list =	ft_node_new(node);
+		return;
+	}
+	else 
+	{
+		if(node != NULL)
+		{
+			new = ft_node_new(node);
+			*list = ft_node_end(*list);
+			ft_node_add_front(list,new);
+		}	
+	}
+}
+
+

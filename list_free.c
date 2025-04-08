@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   list_free.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rui <rui@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: rerodrig <rerodrig@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 14:30:04 by jperpct           #+#    #+#             */
-/*   Updated: 2025/03/14 22:30:52 by jperpct          ###   ########.fr       */
+/*   Updated: 2025/04/05 00:45:18 by rerodrig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,24 +86,24 @@ t_list_	*get_list_index(t_list_ *list, int index)
 	return (node);
 }
 
-void ft_add_node(void *node,t_list_ **list)
+void ft_add_node(void *node, t_list_ **list)
 {
-	t_list_ *new;
-	if(*list == NULL)
-	{
-		if(node != NULL)
-			*list =	ft_node_new(node);
-		return;
-	}
-	else 
-	{
-		if(node != NULL)
-		{
-			new = ft_node_new(node);
-			*list = ft_node_end(*list);
-			ft_node_add_front(list,new);
-		}	
-	}
+    t_list_ *new;
+	t_list_ *end;
+
+    if (*list == NULL)
+    {
+        if (node != NULL)
+            *list = ft_node_new(node);
+        return;
+    }
+    else 
+    {
+        if (node != NULL)
+        {
+            new = ft_node_new(node);
+            end = ft_node_end(*list);
+            ft_node_add_front(&end, new);
+        }    
+    }
 }
-
-
